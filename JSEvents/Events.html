@@ -1,0 +1,56 @@
+<!--Events are nothing but some activity on the webpgae.
+> Events consisting of two things:
+1.Event Listener.
+2.Event Handler.
+
+Eg: <button onclick="f()">Click</button>
+In the above example:onclick is event listener and "f()" is Event Handler.
+>Event Listeners:It is used to catch jthe event occurred on the element.
+1.onclick
+2.onchange
+3.onkeydown
+4.onsubmit
+5.onmouseover
+6.onmouseout
+>EventHandler:It is a function or js function call.
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .one{
+            background-color: black;
+            color: white;        
+        }
+        .one:hover{
+            background-color: cornflowerblue;
+            color: black;
+        }
+        .two{
+            background-color: red;
+            color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <button class="one" onclick="onButtonclick()">Click here</button>
+    <button class="two" onclick="alertcall()">Alert</button>
+    <script>
+        function onButtonclick(){
+            var para=document.createElement('p')
+            para.innerHTML="Hello everyone i am generated because you clicked"
+            var body=document.body
+            body.appendChild(para)
+        }
+        function alertcall(){
+            alert("Hello Good Morning!!")
+        }
+        
+
+    </script>
+</body>
+</html>

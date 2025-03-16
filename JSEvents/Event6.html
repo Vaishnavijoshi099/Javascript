@@ -1,0 +1,56 @@
+<!--
+Adding Event through Javascript:
+-------------------------------------
+We can listen to events through javascript byusing addEventListener()
+
+addEventListener() accepts 2 parameters:
+1.type od event(string) ex:click,change etc...
+2.callback function
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #div{
+            background-color: blue;
+            height: 200px;
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <button id="btn">Submit</button>
+    <select id="select">
+        <option value="one">one</option>
+        <option value="two">two</option>
+        <option value="three">three</option>
+        <option value="four">four</option>
+        <option value="five">five</option>
+
+    </select>
+    <div id="div"></div>
+    <script>
+        var btn=document.getElementById('btn')
+        btn.addEventListener("click",()=>{
+            alert("You have submited value")
+        })
+        var select=document.getElementById('select')
+        select.addEventListener("change",()=>{
+            alert("You have changed the value to "+event.target.value)
+        })
+        var div=document.getElementById('div')
+        div.addEventListener("mouseover",()=>{
+            div.style.backgroundColor="red"
+        })
+        var div1=document.getElementById('div')
+        div1.addEventListener("mouseout",()=>{
+            div.style.backgroundColor="yellow"
+        })
+        
+    </script>
+</body>
+</html>

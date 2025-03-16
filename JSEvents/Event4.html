@@ -1,0 +1,37 @@
+<!--
+>Onmouseover and onmouseout:
+These are the events related to mouse move activity
+
+onmouseover:when we take the cursor or any web element itgets triggered.
+onmouseout:when we take out the cursor from any web element it gets triggered.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            height: 300px;
+            width: 300px;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div id="box" onmouseover="mouseover()" onmouseout="mouseout()"></div>
+    <script>
+        function mouseover(){
+            var box=document.getElementById('box')
+            box.style.backgroundColor="red"
+        }
+        function mouseout(){
+            var box=document.getElementById('box')
+            box.style.backgroundColor="yellow"
+        }
+    </script>
+</body>
+
+</html>

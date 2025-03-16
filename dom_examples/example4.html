@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+        }
+        div{
+            padding: 50px;
+        }
+        header{
+            background-color: black;
+            color: white;
+            height: 70px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        h1,p{
+            margin-top: 30px;
+        }
+        button{
+            margin-top: 30px;
+            background-color: black;
+            color: white;
+            border-radius: 50px;
+        }
+        button:hover{
+            background-color: yellow;
+            color: blue;
+        }
+        table{
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body id="body">
+    <header>My first Page with Javascript</header>
+    <div>
+        <h2>User Details</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta, quam ad incidunt dolores odit commodi ex natus porro doloribus eos, molestiae rerum excepturi libero suscipit ipsam ea nostrum saepe veniam.</p>
+        <button onclick="createtable()">Get User Details</button>
+    </div>
+    <script>
+        function createtable(){
+            var body=document.getElementById('body')
+            var table=document.createElement('table')
+
+            var tr1=document.createElement('tr')
+            var tr2=document.createElement('tr')
+            var tr3=document.createElement('tr')
+            var tr4=document.createElement('tr')
+
+            var th1=document.createElement('th')
+            var th2=document.createElement('th')
+            var th3=document.createElement('th')
+
+            var td1=document.createElement('td')
+            var td2=document.createElement('td')
+            var td3=document.createElement('td')
+
+            var td4=document.createElement('td')
+            var td5=document.createElement('td')
+            var td6=document.createElement('td')
+
+            var td7=document.createElement('td')
+            var td8=document.createElement('td')
+            var td9=document.createElement('td')
+
+            th1.innerHTML="ID"
+            th2.innerHTML="NAME"
+            th3.innerHTML="EMAIL"
+
+            td1.innerHTML="101"
+            td2.innerHTML="Raj Verma"
+            td3.innerHTML="raj@gmail.com"
+
+            td5.innerHTML="Riya"
+            td4.innerHTML="102"
+            td6.innerHTML="riya@gmail.com"
+
+            td7.innerHTML="103"
+            td8.innerHTML="Salman"
+            td9.innerHTML="salman@gmail.com"
+
+            tr1.appendChild(th1)
+            tr1.appendChild(th2)
+            tr1.appendChild(th3)
+
+            tr2.appendChild(td1)
+            tr2.appendChild(td2)
+            tr2.appendChild(td3)
+
+            tr3.appendChild(td4)
+            tr3.appendChild(td5)
+            tr3.appendChild(td6)
+
+            tr4.appendChild(td7)
+            tr4.appendChild(td8)
+            tr4.appendChild(td9)
+
+            table.appendChild(tr1)
+            table.appendChild(tr2)
+            table.appendChild(tr3)
+            table.appendChild(tr4)
+
+            body.appendChild(table)
+
+            tr1.style.backgroundColor="black"
+            table.frame="box"
+            table.tules="all"
+            table.style.margin="auto"
+            table.cellPadding="10px"
+            table.width="800px"
+            tr1.style.color="white"
+            tr2.align="center"
+            tr3.align="center"
+            tr4.align="center"
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!--- 
+> Date: When we need toknowabout the date we should use date object.It gives information regarding
+Day,Month,Year,Minutes,Hours,Seconds and Time Zone.
+var date=new Date()
+*/-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var date= new Date()
+        console.log(date)
+        /*Methods of Date Object
+        1.getDat() is used to get current date
+        2.getMonth() is used to get current Month
+        3.getDay() is used to get current day
+        4.getFullYear() is used to get current year
+        5.getHours() is used to print current hour
+        6.getMinute() is used to print current minute
+        7.getseconds() is used to print current seconds
+        */
+       var currentdate=date.getDate()
+       console.log(currentdate)
+
+       var currentmonth=date.getMonth()
+       console.log(currentmonth)
+
+       var currentDay=date.getDay()
+       console.log(currentDay)
+
+       var year=date.getFullYear()
+       console.log(year)
+
+       var hour=date.getHours()
+       console.log(hour)
+
+       var min=date.getMinutes()
+       console.log(min)
+
+       var sec=date.getSeconds()
+       console.log(sec)
+
+       var msec=date.getMilliseconds()
+       console.log(msec)
+
+       var timezone=date.getTimezoneOffset()
+       console.log(timezone)
+
+
+
+
+
+        
+    </script>
+</body>
+</html>

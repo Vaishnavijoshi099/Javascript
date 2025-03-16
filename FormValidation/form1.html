@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        main{
+            height: 600px;
+            width: 600px;
+            box-shadow: 0px 0px 10px black;
+            margin: 90px auto;
+            text-align: center;
+            background-color:burlywood;
+
+        }
+        #myform{
+            display: flex;
+            flex-direction: column;
+            padding: 30px;
+            align-items: center;
+        }
+        input{
+            height: 30px;
+            width: 60%;
+            background-color: wheat;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        label{
+            font-size: x-large;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+        }
+        button{
+            background-color: black;
+            color: white;
+            border-radius: 10px;
+        }
+        button:hover{
+            background-color: blue;
+            color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <form id="myform">
+            <label>First Name</label>
+            <input id="fname" type="text" name="fname" placeholder="Enter first name"><br><br>
+            <label>Last Name</label>
+            <input id="lname" type="text" name="lname" placeholder="Enter last name"><br><br>
+            <label>Email</label>
+            <input id="email" type="email" name="email" placeholder="Enter your email"><br><br>
+            <label>Password</label>
+            <input id="password" type="password" name="password" placeholder="Enter your Password"><br><br>
+            <label>Confirm Password</label>
+            <input id="cnfpassword" type="password" name="password" placeholder="Enter confirm Password"><br><br>
+            <button type="submit" onclick="validateform()">Submit</button>
+        </form>
+    </main>
+    <script>
+        function validateform(){
+        var fname=document.getElementById('fname').value
+        var lname=document.getElementById('lname').value
+        var email=document.getElementById('email').value
+        var password=document.getElementById('password').value
+        var cnfpassword=document.getElementById('cnfpassword').value
+
+        
+            if(fname=="" || lname==""|| email==""|| password=="" || cnfpassword==""){
+                input.style.Color="red"
+               // alert("All the input fields should be filled")
+            }
+            else if(password!=cnfpassword){
+                alert("Password is not matching")
+            }
+            else{
+                alert("Form submited successfully")
+            }
+            
+        }
+
+    </script>
+</body>
+</html>
